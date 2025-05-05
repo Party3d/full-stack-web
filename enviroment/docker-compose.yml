@@ -16,7 +16,7 @@ services:
 
   backend:
     build:
-      context: ./backend
+      context: ../backend/app-java
     container_name: springboot-app
     depends_on:
       - postgres
@@ -31,7 +31,7 @@ services:
 
   frontend:
     build:
-      context: ./frontend
+      context: ../frontend/web-angular
     container_name: angular-app
     depends_on:
       - backend
