@@ -1,0 +1,9 @@
+# Forçar LF para todos os arquivos de texto
+* text=auto eol=lf
+
+# Para arquivos específicos, pode usar:
+*.sh text eol=lf
+*.yml text eol=lf
+*.java text eol=lf
+*.ts text eol=lf
+*.html text eol=lf

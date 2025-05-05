@@ -1,0 +1,43 @@
+# === BACKEND (Java / Spring Boot) ===
+backend/target/
+backend/.classpath
+backend/.project
+backend/.settings/
+backend/.idea/
+backend/*.iml
+backend/.env
+backend/.DS_Store
+
+# === FRONTEND (Angular) ===
+frontend/**/node_modules/
+frontend/**/dist/
+frontend/**/.angular/cache/
+frontend/**/.env
+frontend/**/.idea/
+frontend/**/.vscode/
+frontend/**/.DS_Store
+
+# === LOGS ===
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# === SYSTEM FILES ===
+.DS_Store
+Thumbs.db
+
+# === ENV FILES ===
+.env
+*.env
+
+# === DOCKER ===
+**/.dockerignore
+**/docker-compose.override.yml
+
+# === OS-SPECIFIC ===
+*~
+
+# === IDEs ===
+*.iml
+*.swp

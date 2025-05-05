@@ -1,0 +1,7 @@
+<h2>Adicionar Item</h2>
+<form (ngSubmit)="salvar()">
+  <input [(ngModel)]="item.nome" name="nome" placeholder="Nome" required />
+  <input [(ngModel)]="item.descricao" name="descricao" placeholder="Descrição" required />
+  <button type="submit">Salvar</button>
+</form>
+
