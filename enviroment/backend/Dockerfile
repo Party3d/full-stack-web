@@ -8,5 +8,13 @@ RUN mvn clean package -DskipTests
 FROM openjdk:17-jdk-slim
 WORKDIR /app
 COPY --from=builder /app/target/app-0.0.1-SNAPSHOT.jar app.jar
-ENTRYPOINT ["java", "-jar", "app.jar"]
+COPY wait-for-db.sh .
+RUN apt-get update && apt-get install -y postgresql-client 
+RUN chmod +x wait-for-db.sh
+ENV DATABASE_HOST=postgres
+ENV DATABASE_PORT=5432
+ENV DATABASE_NAME=seubanco
+ENV DATABASE_USER=seuusuario
+ENV DATABASE_PASSWORD=suasenha
+ENTRYPOINT ["./wait-for-db.sh", "java", "-jar", "app.jar"]
 
