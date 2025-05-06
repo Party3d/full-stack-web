@@ -73,7 +73,3 @@ docker stop $(docker ps -aq)
 docker rm $(docker ps -aq)
 docker volume rm $(docker volume ls -q)
 ```
-
-## Licença
-
-Este projeto está licenciado sob a [MIT License](LICENSE).
